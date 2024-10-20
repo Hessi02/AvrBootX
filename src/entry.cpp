@@ -1,6 +1,7 @@
 #include "com/uart/controller.hpp"
 
-extern "C" int __entry(void)
+extern "C" __attribute__((section(".bootloader")))
+int __entry(void)
 {
     Com::Uart::Controller controller;
 
